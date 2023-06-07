@@ -1,0 +1,24 @@
+.BookingForm {
+    h2 {
+      color: #333;
+    }
+  
+    form {
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: #333;
+      }
+  
+      .FormInput {
+        width: 100%;
+        padding: 5px;
+        margin-top: 5px;
+      }
+  
+      .FormButton {
+        margin-top: 10px;
+      }
+    }
+  }
+  

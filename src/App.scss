@@ -1,0 +1,65 @@
+.App {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.ShowList {
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  .ShowItem {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f5f5f5;
+
+    h3 {
+      margin: 0;
+    }
+
+    p {
+      margin-top: 5px;
+    }
+
+    .ShowButton {
+      margin-top: 10px;
+    }
+  }
+}
+
+.ShowSummary {
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-top: 5px;
+  }
+
+  .ShowButton {
+    margin-top: 10px;
+  }
+}
+
+.BookingForm {
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  form {
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .FormInput {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+
+    .FormButton {
+      margin-top: 10px;
+    }
+  }
+}
