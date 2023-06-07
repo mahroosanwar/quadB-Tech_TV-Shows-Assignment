@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { DatePicker, TimePicker } from "antd";
+import Button from "../../Button/Button";
 
 import "./BookingForm.scss";
 
@@ -94,9 +95,7 @@ function BookingForm({ query }) {
             required
           />
         </label>
-        <button type="submit" className="FormButton">
-          Book Ticket
-        </button>
+        <Button type="submit">Book Ticket</Button>
       </form>
     </div>
   );

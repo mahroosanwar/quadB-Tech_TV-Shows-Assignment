@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Button from "../../Button/Button";
 import "./ShowList.scss";
 
 function ShowList() {
@@ -21,59 +22,35 @@ function ShowList() {
     fetchShows();
   }, []);
 
-  // useEffect(() => {
-  //   const handlePopstate = () => {
-  //     // Scroll to the previous position if available
-  //     const prevScrollPosition = sessionStorage.getItem("prevScrollPosition");
-  //     if (prevScrollPosition) {
-  //       window.scrollTo(0, parseInt(prevScrollPosition));
-  //     }
-  //   };
-
-  //   // Add event listener for browser back button or keyboard shortcut
-  //   window.onpopstate = handlePopstate;
-
-  //   return () => {
-  //     // Cleanup event listener
-  //     window.onpopstate = null;
-  //   };
-  // }, []);
-
-  // const handleScroll = () => {
-  //   // Store the current scroll position in session storage
-  //   sessionStorage.setItem("prevScrollPosition", window.pageYOffset);
-  // };
-
   console.log(shows);
 
   return (
-    <div className="ShowList">
+    <div className="Shows">
       <h2>TV Shows</h2>
-      {shows.map((showItem) => (
-        <div className="ShowItem" key={showItem.show.id}>
-          <h3>{showItem.show.name}</h3>
-          <img src={showItem.show.image.medium} alt={showItem.show.name} />
-          <div>
-            {/* {showItem.show.runtime && ( */}
-            <div>
-              <span>Runtime: </span>
-              {showItem.show.runtime ? showItem.show.runtime : "N/A"}
+      <div className="ShowList">
+        {shows.map((showItem) => (
+          <div className="ShowItem" key={showItem.show.id}>
+            <h3>{showItem.show.name}</h3>
+            <img src={showItem.show.image.medium} alt={showItem.show.name} />
+            <div className="ShowsFrontAbout">
+              <div>
+                <span>Runtime: </span>
+                {showItem.show.runtime ? `${showItem.show.runtime} min` : "N/A"}
+                
+              </div>
+              <div>
+                <span>rating: </span>
+                {showItem.show.rating.average
+                  ? showItem.show.rating.average
+                  : "N/A"}
+              </div>
             </div>
-            {/* )} */}
-            {/* {showItem.show.rating.average && ( */}
-            <div>
-              <span>rating: </span>
-              {showItem.show.rating.average
-                ? showItem.show.rating.average
-                : "N/A"}
-            </div>
-            {/* )} */}
+            <Link to={`/summary/${showItem.show.id}`} className="btn-section">
+              <Button>View Detail</Button>
+            </Link>
           </div>
-          <Link to={`/summary/${showItem.show.id}`}>
-            <button className="ShowButton">View Summary</button>
-          </Link>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
