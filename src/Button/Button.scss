@@ -37,6 +37,7 @@ $color_1: rgba(2, 126, 251, 1);
     height: 100%;
     &:hover {
       color: $color_1;
+      font-weight: 600;
       &:before {
         height: 100%;
       }

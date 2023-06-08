@@ -1,24 +1,22 @@
 .BookingForm {
-    h2 {
-      color: #333;
+  h2 {
+    color: #ffffff;
+  }
+
+  form {
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #ebebeb;
     }
-  
-    form {
-      label {
-        display: block;
-        margin-bottom: 10px;
-        color: #333;
-      }
-  
-      .FormInput {
-        width: 100%;
-        padding: 5px;
-        margin-top: 5px;
-      }
-  
-      .FormButton {
-        margin-top: 10px;
-      }
+
+    .FormInput {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+      height: 30px;
+      border-radius: 5px;
+      border: none;
     }
   }
-  
+}

@@ -75,10 +75,12 @@ function BookingForm({ query }) {
         </label>
         <label>
           Date:
+          <br />
           <DatePicker onChange={onDateChangeHandler} />
         </label>
         <label>
           Show Time:
+          <br />
           <TimePicker
             use12Hours
             format="h:mm a"
@@ -95,7 +97,7 @@ function BookingForm({ query }) {
             required
           />
         </label>
-        <Button type="submit">Book Ticket</Button>
+          <Button type="submit">Book Ticket</Button>
       </form>
     </div>
   );
